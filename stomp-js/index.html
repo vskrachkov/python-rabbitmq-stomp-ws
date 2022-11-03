@@ -78,8 +78,9 @@
         };
 
       // Stomp.js boilerplate
-      var client = Stomp.client('ws://127.0.0.1:8000/stomp');
+      //var client = Stomp.client('ws://127.0.0.1:8000/stomp');
       //var client = Stomp.client('ws://localhost:15674/ws');
+      var client = Stomp.client('ws://localhost:8765');
       client.debug = pipe('#second');
 
       var print_first = pipe('#first', function(data) {
