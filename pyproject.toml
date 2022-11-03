@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["vsk <v.krachkov@enestech.net>"]
 readme = "README.md"
-packages = [{include = "django_channels_rabbitmq_stomp"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
