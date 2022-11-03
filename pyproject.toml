@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "django-channels-rabbitmq-stomp"
+name = "python-rabbit-stomp-ws"
 version = "0.1.0"
 description = ""
 authors = ["vsk <v.krachkov@enestech.net>"]
