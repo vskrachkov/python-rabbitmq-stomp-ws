@@ -86,9 +86,15 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
-    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",},
-    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",},
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
+    {
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+    },
 ]
 
 
@@ -121,13 +127,16 @@ LOGGING = {
     "disable_existing_loggers": False,
     "filters": {},
     "formatters": {
-        # "json": {"()": "django_json_logging.logging.JSONFormatter"},
+        "verbose": {
+            "format": "{levelname} {asctime} {name} {message}",
+            "style": "{",
+        },
     },
     "handlers": {
         "default": {
             "class": "logging.StreamHandler",
             "level": "DEBUG",
-            # "formatter": "json",
+            "formatter": "verbose",
         },
     },
     "loggers": {

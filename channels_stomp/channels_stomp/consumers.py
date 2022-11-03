@@ -25,7 +25,7 @@ class StompWebSocketConsumer(AsyncWebsocketConsumer):
         return self._websocket_client
 
     async def connect(self):
-        await self.accept()
+        await self.accept(subprotocol="v11.stomp")
         self._websocket_client = await websockets.connect(STOMP_URL)
 
         async def consumer_handler(websocket: WebSocketClientProtocol):
